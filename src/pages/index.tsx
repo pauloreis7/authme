@@ -16,12 +16,25 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <form onSubmit={handleSubmit}>
-        <div className={styles.formContentS}>
+      <form onSubmit={handleSubmit} className={styles.formContainer}>
+        <div className={styles.formContent}>
           <h1>Login</h1>
 
-          <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-          <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
+          <label htmlFor="emailInput">Email</label>
+          <input 
+            id="emailInput" 
+            type="email" 
+            value={email} 
+            onChange={e => setEmail(e.target.value)} 
+          />
+
+          <label htmlFor="passwordInput">Password</label>
+          <input 
+            id="passwordInput" 
+            type="password" 
+            value={password} 
+            onChange={e => setPassword(e.target.value)} 
+          />
         </div>
 
         <button type="submit">Login</button>

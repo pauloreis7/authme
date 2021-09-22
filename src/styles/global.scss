@@ -9,12 +9,12 @@
   --black: #000000;
 
   --gray-100: #EDF2F7;
-  --gray-300: #CBD5E0;
-  --gray-500: #718096;
+  --gray-300: #E2E8F0;
+  --gray-500: #A0AEC0;
   --gray-700: #2D3748;
   --gray-900: #171923;
 
-  --green-500: #38A169;
+  --green-500: #00c500;
 }
 
 @media (max-width: 1080px) {
@@ -30,7 +30,7 @@
 }
 
 body {
-  background: var(--gray-300);
+  background: var(--gray-100);
   color: var(--gray-700);
   -webkit-font-smoothing: antialiased;
 }
