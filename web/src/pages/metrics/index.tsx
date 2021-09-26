@@ -1,20 +1,12 @@
-import { useAuth } from '../../contexts/AuthContext'
 import { setupAPIClient } from '../../services/api'
 import { withSSRAuth } from '../../utils/withSSRAuth'
-import { Can } from '../../components/Can'
 
-import styles from './dashboard.module.scss'
+import styles from './metrics.module.scss'
 
-export default function Dashboard() {
-  const { user } = useAuth()
-
+export default function Metrics() {
   return (
     <div className={styles.container}>
-      <h1>Dashboard: {user?.email}</h1>
-
-      <Can permissions={['metrics.list']}>
-        <p>Permissions</p>
-      </Can>
+      <h1>Metrics</h1>
     </div>
   )
 }
@@ -27,4 +19,7 @@ export const getServerSideProps = withSSRAuth(async (ctx) => {
   return {
     props: {}
   }
+}, {
+  permissions: ['metrics.list'],
+  roles: ['administrator'],
 })
