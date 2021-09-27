@@ -40,6 +40,8 @@ export default function Home() {
             value={password} 
             onChange={e => setPassword(e.target.value)} 
           />
+
+          <footer>Login credentials - email: paulo@authme.team / password: 123456</footer>
         </div>
 
         <button type="submit">Login</button>
