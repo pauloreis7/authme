@@ -6,14 +6,16 @@ import { Can } from '../../components/Can'
 import styles from './dashboard.module.scss'
 
 export default function Dashboard() {
-  const { user } = useAuth()
+  const { user, signOut } = useAuth()
 
   return (
     <div className={styles.container}>
       <h1>Dashboard: {user?.email}</h1>
 
+      <button onClick={signOut}>Sign Out</button>
+
       <Can permissions={['metrics.list']}>
-        <p>Permissions</p>
+        <p>Metrics</p>
       </Can>
     </div>
   )
